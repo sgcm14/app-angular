@@ -5,23 +5,32 @@ import { Component } from "@angular/core";
   templateUrl: 'heroe.component.html'
 })
 export class HeroeComponent {
-  nombre: string = 'Ironman';
-  edad: number = 45;
+  name: string = 'Ironman';
+  age: number = 45;
 
-  get nombreCapitalizado(): string {
-    return this.nombre.toUpperCase();
+  get capitalizedName(): string {
+    return this.name.toUpperCase();
   }
 
-  obtenerNombre(): string {
-    return `${this.nombre}-${this.edad}`;
+  getName(): string {
+    return `${this.name}-${this.age}`;
   }
 
-  cambiarNombre(): void {
-    this.nombre = 'Spiderman'
+  changeHero(): void {
+    this.name = 'Spiderman'
   }
 
-  cambiarEdad(): void {
-    this.edad = 30
+  changeAge(): void {
+    this.age = 30
+  }
+
+  resetForm(): void {
+    this.name = ' Ironman';
+    this.age = 45;
+
+    // document.querySelectorAll('h1').forEach(element => {
+    //   element.innerHTML = '<h1>Desde Angular </h1>';
+    // });
   }
 
 }
