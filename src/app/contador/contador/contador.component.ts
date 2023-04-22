@@ -4,20 +4,23 @@ import { Component } from '@angular/core';
   selector: 'app-contador',
   template: `
     <h1>{{title}}</h1>
-    <h3>La base es: <strong>{{base}}</strong></h3>
-    <button (click)='acumular(base)'> +{{base}} </button>
-    <span>{{numero}}</span>
-
-    <button (click)="acumular(-base)"> -{{base}} </button>
+    <h3>Counter: <strong>{{counter}}</strong></h3>
+    <button (click)="increaseBy(base)"> +{{base}} </button>
+    <button (click)="resetCounter()">Reset</button>
+    <button (click)="increaseBy(-base)"> -{{base}} </button>
   `
 })
 
 export class ContadorComponent {
   title: string = 'Contador App';
-  numero: number = 10;
-  base: number = 5;
+  counter: number = 10;
+  base: number = 1;
 
-  acumular(valor: number) {
-    this.numero += valor;
+  increaseBy(value: number): void {
+    this.counter += value;
+  }
+
+  resetCounter() {
+    this.counter = 10;
   }
 }
