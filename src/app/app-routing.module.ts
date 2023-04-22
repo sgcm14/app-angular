@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 // import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ContadorComponent } from './contador/contador/contador.component';
-import { MainPageComponent } from './dbz/main-page/main-page.component';
+import { MainPageComponent } from 'src/app/dbz/components/pages/main-page/main-page.component';
 import { HeroeComponent } from './heroes/heroe/heroe.component';
 import { ListadoComponent } from './heroes/listado/listado.component';
 
